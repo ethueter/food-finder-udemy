@@ -6,6 +6,7 @@ import ResultsList from '../components/resultsList';
 
 
 const SearchScreen = () => {
+    
     const [term, setTerm] = useState('');
     const [searchApi, results, errMsg] = useResults()
    
@@ -25,9 +26,9 @@ const SearchScreen = () => {
             { {errMsg} ? <Text>{errMsg}</Text> :null}
             
             <ScrollView>
-                <ResultsList results={filterResultsByPrice('$')} title="Cost Effective"  />
-                <ResultsList results={filterResultsByPrice('$$')} title="Bit Pricier" />
-                <ResultsList results={filterResultsByPrice('$$$')} title="Big Spender" />
+                <ResultsList  results={filterResultsByPrice('$')} title="Cost Effective"  />
+                <ResultsList  results={filterResultsByPrice('$$')} title="Bit Pricier" />
+                <ResultsList  results={filterResultsByPrice('$$$')} title="Big Spender" />
             </ScrollView>
         </View>
     )
